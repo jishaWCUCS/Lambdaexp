@@ -2,6 +2,7 @@ package org.example;
 
 public class LambdaExp {
     public static void main(String[] args) {
+
         // lambda expression to implement above
         // functional interface. This interface
         // by default implements singleAbstractMethod()
