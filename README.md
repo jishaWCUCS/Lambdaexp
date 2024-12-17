@@ -38,3 +38,18 @@ abstract class Shape {
     }
 }
 The draw() method is an abstract method and must be implemented by any non-abstract subclass of Shape.
+
+?. Based on the syntax rules just shown, which of the following is/are NOT valid lambda expressions?
+() -> {}
+() -> “geeksforgeeks”
+() -> { return “geeksforgeeks”;}
+(Integer i) -> return “geeksforgeeks” + i;
+(String s) -> {“geeksforgeeks”;}
+4 and 5 are invalid lambdas, the rest are valid. Details:
+
+
+ This lambda has no parameters and returns void. It’s similar to a method with an empty body: public void run() { }.  
+ This lambda has no parameters and returns a String as an expression.
+This lambda has no parameters and returns a String (using an explicit return statement, within a block).
+return is a control-flow statement. To make this lambda valid, curly braces are required as follows: (Integer i) -> { return “geeksforgeeks” + i; }.
+“geeks for geeks” is an expression, not a statement. To make this lambda valid, you can remove the curly braces and semicolon as follows: (String s) -> “geeks for geeks”. Or if you prefer, you can use an explicit return statement as follows: (String s) -> { return “geeks for geeks”; }. 
