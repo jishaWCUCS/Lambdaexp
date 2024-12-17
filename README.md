@@ -8,6 +8,15 @@ Code as Data: Treat functionality as a method argument.
 Class Independence: Create functions without defining a class.
 Pass and Execute: Pass lambda expressions as objects and execute on demand.
 
+Here are some significant points regarding Functional interfaces in Java:
+
+
+In functional interfaces, there is only one abstract method supported. If the annotation of a functional interface, i.e., @FunctionalInterface is not implemented or written with a function interface, more than one abstract method can be declared inside it. However, in this situation with more than one functions, that interface will not be called a functional interface. It is called a non-functional interface.
+There is no such need for the @FunctionalInterface annotation as it is voluntary only. This is written because it helps in checking the compiler level. Besides this, it is optional.
+An infinite number of methods (whether static or default) can be added to the functional interface. In simple words, there is no limit to a functional interface containing static and default methods.
+Overriding methods from the parent class do not violate the rules of a functional interface in Java.
+The java.util.function package contains many built-in functional interfaces in Java 8.
+
 
 An abstract method in Java is a method that is declared without a body (implementation). It only has a method signature (name, parameters, and return type) 
 but no implementation. It serves as a placeholder for methods that must be implemented by a subclass.
