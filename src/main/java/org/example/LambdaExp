@@ -1,0 +1,13 @@
+package org.example;
+
+public class LambdaExp {
+    public static void main(String[] args) {
+        // lambda expression to implement above
+        // functional interface. This interface
+        // by default implements singleAbstractMethod()
+        
+        FunctionalInterface fobj = (int x) -> System.out.print(5 + x);
+        fobj.singleAbstractMethod(3);
+        
+    }
+}
